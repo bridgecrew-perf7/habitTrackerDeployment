@@ -1,7 +1,54 @@
+*{
+  box-sizing:border-box;
+}
 button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.navbar {
+  font-size: 2rem;
+  padding: 1em;
+  background-color: blanchedalmond;
+}
+
+.input-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.habit-input {
+  display: inline-block;
+  height: 43px;
+  width: 397px;
+  border: 2px solid #767676;
+  border-radius: 20px;
+  padding: 1px 2px;
+  margin-right: 3px;
+
+  font-size: 32px;
+  text-decoration: none;
+  background-color: white;
+  color:dimgrey;
+}
+
+
+.input-button {
+  display: flex;
+  justify-content:center;
+  height: 43px;
+  width: 67px;
+  padding: 7px 12px;
+  margin-left: 3px;
+  border-radius: 30px;
+
+  font-size: 24px;
+  background-color: darkgreen;
+  color:white;
 }
 
 .habit {
@@ -42,4 +89,14 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: saddlebrown;
+}
+
+.reset-button{
+  margin-left: 2rem;
+  border-radius: 30px;
+  padding: 7px 12px;
+  
+  font-size: 24px;
+  background-color: darkgreen;
+  color:white;
 }
