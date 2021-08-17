@@ -10,7 +10,6 @@ class Habit extends Component {
     };
     handleDelete = () => {
         this.props.onDelete(this.props.habit);
-
     };
     render() {
         const {name, count} = this.props.habit;
