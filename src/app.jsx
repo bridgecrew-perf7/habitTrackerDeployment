@@ -31,6 +31,13 @@ handleDelete = (habit) => {
   //item.id가 habit.id와 동일하지 않으면 배열을 만들고 삭제되게
   this.setState({ habits });
 };
+handleReset = () => { //습관리스트를 없애는 쪽으로 만들기
+  const habits = this.state.habits.map(habit => {
+    habit.count = 0;
+    return habit;
+  });
+  this.setState({ habits });
+}
   render() {
     return (
         <>
@@ -40,6 +47,7 @@ handleDelete = (habit) => {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
+            onReset={this.handleReset}
           />
         </>
     );
