@@ -5,12 +5,7 @@ import NavBar from './components/navbar';
 import Habits from './components/habits';
 
 class App extends Component {
-  state = {
-    habits: [
-        {id: 1, name: 'Reading', count: 0},
-        {id: 2, name: 'Running', count: 0},
-        {id: 3, name: 'Coding', count: 0},
-    ]
+  state = { habits: []
 }
 handleIncrement = (habit) => { // Callback 함수를 통해 각각의 컴포넌트에 들어있는 인자로 전달됨
   const habits = [...this.state.habits]; //... spread operator: 새로운 배열안에 같은 내용의 아이템들을 복사해 옴
@@ -31,22 +26,24 @@ handleDelete = (habit) => {
   //item.id가 habit.id와 동일하지 않으면 배열을 만들고 삭제되게
   this.setState({ habits });
 };
-handleReset = () => { //습관리스트를 없애는 쪽으로 만들기
-  const habits = this.state.habits.map(habit => {
-    habit.count = 0;
-    return habit;
-  });
+handleAdd = (name) => {
+  const habits = [...this.state.habits, {id: Date.now(), name, count: 0}];
   this.setState({ habits });
-}
-  render() {
-    return (
-        <>
+};
+handleReset = () => {
+  const habits = [];
+  this.setState({ habits });
+};
+  render() {// UI가 정의된 부분
+    return ( 
+        <> 
           <NavBar totalCount={this.state.habits.filter(item => item.count > 0).length}/>
           <Habits
             habits={this.state.habits}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
+            onAdd={this.handleAdd}
             onReset={this.handleReset}
           />
         </>
