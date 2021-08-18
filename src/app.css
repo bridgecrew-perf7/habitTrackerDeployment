@@ -8,9 +8,30 @@ button {
 }
 
 .navbar {
+  font-style: bold;
   font-size: 2rem;
   padding: 1em;
   background-color: blanchedalmond;
+}
+
+.navbar-logo {
+  color: forestgreen;
+  margin-left:0.2em;
+  margin-right:0.2em;
+}
+
+.navbar-button {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size:2rem;
+  margin: 0 0.1em;
+  background-color:sandybrown;
+  color:white;
+  border-radius: 50%;
 }
 
 .input-form {
@@ -26,9 +47,9 @@ button {
   height: 43px;
   width: 397px;
   border: 2px solid #767676;
-  border-radius: 20px;
   padding: 1px 2px;
   margin-right: 3px;
+  border-radius: 10px;
 
   font-size: 32px;
   text-decoration: none;
@@ -44,7 +65,7 @@ button {
   width: 67px;
   padding: 7px 12px;
   margin-left: 3px;
-  border-radius: 30px;
+  border-radius: 10px;
 
   font-size: 24px;
   background-color: darkgreen;
