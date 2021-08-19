@@ -81,19 +81,18 @@ button {
 .habit-count {
   display: inline-block;
   text-align: center;
-  font-size: 2rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  font-size: 2.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
   line-height: 2.5rem;
-  margin-left: 0.2em;
-  margin-right: 0.5em;
+  margin: 0 0.1em;
   background-color:sandybrown;
   color:white;
   border-radius: 50%;
 }
 
 .habit-button {
-  font-size:2.5rem;
+  font-size:2.6rem;
   margin: 0 0.1em;
   background-color: transparent;
 }
