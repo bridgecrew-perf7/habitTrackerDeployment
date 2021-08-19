@@ -21,13 +21,15 @@ class Habits extends Component {
     };
     render() {
         console.log('habits');
-        return (
+        return ( // 자식요소 둘 HabitAddForm, Habit
             <div className="habits">
                 <HabitAddForm onAdd={this.props.onAdd}/>
                 <ul>
                     { this.props.habits.map( habit => (
                     <Habit 
-                        key={habit.id} habit={habit} // Callback함수들을 props로 전달
+                        key={habit.id} // Callback함수들을 props로 전달
+                        habit={habit}
+                        count={habit.count} //버튼을 누르면 갯수가 변하기 때문에 따로 빼 Obj.로 전달
                         onIncrement={this.props.onIncrement} // +버튼 클릭시 전달된 handleIncrement호출
                         onDecrement={this.props.onDecrement}
                         onDelete={this.props.onDelete}

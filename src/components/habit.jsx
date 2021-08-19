@@ -1,7 +1,7 @@
 // habit의 전체적인 내용(+- 버튼, 휴지통)
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
     handleIncrement = () => { // 단순 props로 전달받은 데이터를 인자로 전달
         this.props.onIncrement(this.props.habit);
     };
@@ -16,6 +16,7 @@ class Habit extends Component {
     }
     render() {
         const {name, count} = this.props.habit;
+        // 방법 1. const {count} = this.props; // count 따로 받기
         return (
         <li className="habit">
             <span className="habit-name"> {name} </span>
